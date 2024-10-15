@@ -1456,7 +1456,7 @@ spec:
                                   The maximum number of pods that can be scheduled above the desired number of
                                   pods.
                                   Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).
-                                  This can not be 0 if MaxUnavailable is 0.
+                                  This cannot be 0 if MaxUnavailable is 0.
                                   Absolute number is calculated from percentage by rounding up.
                                   Defaults to 25%.
                                   Example: when this is set to 30%, the new ReplicaSet can be scaled up immediately when
@@ -1473,7 +1473,7 @@ spec:
                                   The maximum number of pods that can be unavailable during the update.
                                   Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).
                                   Absolute number is calculated from percentage by rounding down.
-                                  This can not be 0 if MaxSurge is 0.
+                                  This cannot be 0 if MaxSurge is 0.
                                   Defaults to 25%.
                                   Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of desired pods
                                   immediately when the rolling update starts. Once new pods are ready, old ReplicaSet
@@ -1710,7 +1710,7 @@ spec:
                                   The maximum number of nodes with an existing available DaemonSet pod that
                                   can have an updated DaemonSet pod during during an update.
                                   Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).
-                                  This can not be 0 if MaxUnavailable is 0.
+                                  This cannot be 0 if MaxUnavailable is 0.
                                   Absolute number is calculated from percentage by rounding up to a minimum of 1.
                                   Default value is 0.
                                   Example: when this is set to 30%, at most 30% of the total number of nodes
@@ -1783,7 +1783,7 @@ spec:
                                   The maximum number of pods that can be scheduled above the desired number of
                                   pods.
                                   Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).
-                                  This can not be 0 if MaxUnavailable is 0.
+                                  This cannot be 0 if MaxUnavailable is 0.
                                   Absolute number is calculated from percentage by rounding up.
                                   Defaults to 25%.
                                   Example: when this is set to 30%, the new ReplicaSet can be scaled up immediately when
@@ -1800,7 +1800,7 @@ spec:
                                   The maximum number of pods that can be unavailable during the update.
                                   Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).
                                   Absolute number is calculated from percentage by rounding down.
-                                  This can not be 0 if MaxSurge is 0.
+                                  This cannot be 0 if MaxSurge is 0.
                                   Defaults to 25%.
                                   Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of desired pods
                                   immediately when the rolling update starts. Once new pods are ready, old ReplicaSet
@@ -2764,7 +2764,7 @@ spec:
                             to see the host machine. Most containers will NOT need this.
                             More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
                             ---
-                            TODO(jonesdl) We need to restrict who can use host directory mounts and who can/can not
+                            TODO(jonesdl) We need to restrict who can use host directory mounts and who can/cannot
                             mount host directories as read/write.
                           properties:
                             path:
