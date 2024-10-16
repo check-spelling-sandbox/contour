@@ -83,6 +83,10 @@
 ^\Q.codespell.ignorewords\E$
 ^\Q.github/workflows/spelling.yml\E$
 ^\Qapis/projectcontour/v1/helpers_test.go\E$
+^\Qexamples/contour/01-crds.yaml\E$
+^\Qexamples/gateway/00-crds.yaml\E$
+^\Qexamples/render/contour.yaml\E$
+^\Qexamples/render/contour-deployment.yaml\E$
 ^\Qexamples/render/contour-gateway-provisioner.yaml\E$
 ^\Qexamples/render/contour-gateway.yaml\E$
 ^\Qinternal/fixture/certificate_constants.go\E$
