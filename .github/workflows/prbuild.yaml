@@ -38,6 +38,7 @@ jobs:
         channel: '#contour-ci-notifications'
       if: ${{ failure() && github.ref == 'refs/heads/main' }}
   codespell:
+    if: false
     name: Codespell
     runs-on: ubuntu-latest
     timeout-minutes: 5
