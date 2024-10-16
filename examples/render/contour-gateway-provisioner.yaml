@@ -951,13 +951,13 @@ spec:
                                               type: string
                                             ignoreCase:
                                               description: |-
-                                                IgnoreCase specifies that string matching should be case insensitive.
+                                                IgnoreCase specifies that string matching should be case-insensitive.
                                                 Note that this has no effect on the Regex parameter.
                                               type: boolean
                                             name:
                                               description: |-
                                                 Name is the name of the header to match against. Name is required.
-                                                Header names are case insensitive.
+                                                Header names are case-insensitive.
                                               type: string
                                             notcontains:
                                               description: |-
@@ -1456,7 +1456,7 @@ spec:
                                   The maximum number of pods that can be scheduled above the desired number of
                                   pods.
                                   Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).
-                                  This can not be 0 if MaxUnavailable is 0.
+                                  This cannot be 0 if MaxUnavailable is 0.
                                   Absolute number is calculated from percentage by rounding up.
                                   Defaults to 25%.
                                   Example: when this is set to 30%, the new ReplicaSet can be scaled up immediately when
@@ -1473,7 +1473,7 @@ spec:
                                   The maximum number of pods that can be unavailable during the update.
                                   Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).
                                   Absolute number is calculated from percentage by rounding down.
-                                  This can not be 0 if MaxSurge is 0.
+                                  This cannot be 0 if MaxSurge is 0.
                                   Defaults to 25%.
                                   Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of desired pods
                                   immediately when the rolling update starts. Once new pods are ready, old ReplicaSet
@@ -1708,9 +1708,9 @@ spec:
                                 - type: string
                                 description: |-
                                   The maximum number of nodes with an existing available DaemonSet pod that
-                                  can have an updated DaemonSet pod during during an update.
+                                  can have an updated DaemonSet pod during an update.
                                   Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).
-                                  This can not be 0 if MaxUnavailable is 0.
+                                  This cannot be 0 if MaxUnavailable is 0.
                                   Absolute number is calculated from percentage by rounding up to a minimum of 1.
                                   Default value is 0.
                                   Example: when this is set to 30%, at most 30% of the total number of nodes
@@ -1720,7 +1720,7 @@ spec:
                                   pod is available (Ready for at least minReadySeconds) the old DaemonSet pod
                                   on that node is marked deleted. If the old pod becomes unavailable for any
                                   reason (Ready transitions to false, is evicted, or is drained) an updated
-                                  pod is immediatedly created on that node without considering surge limits.
+                                  pod is immediatelycreated on that node without considering surge limits.
                                   Allowing surge implies the possibility that the resources consumed by the
                                   daemonset on any given node can double if the readiness check fails, and
                                   so resource intensive daemonsets should take into account that they may
@@ -1783,7 +1783,7 @@ spec:
                                   The maximum number of pods that can be scheduled above the desired number of
                                   pods.
                                   Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).
-                                  This can not be 0 if MaxUnavailable is 0.
+                                  This cannot be 0 if MaxUnavailable is 0.
                                   Absolute number is calculated from percentage by rounding up.
                                   Defaults to 25%.
                                   Example: when this is set to 30%, the new ReplicaSet can be scaled up immediately when
@@ -1800,7 +1800,7 @@ spec:
                                   The maximum number of pods that can be unavailable during the update.
                                   Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).
                                   Absolute number is calculated from percentage by rounding down.
-                                  This can not be 0 if MaxSurge is 0.
+                                  This cannot be 0 if MaxSurge is 0.
                                   Defaults to 25%.
                                   Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of desired pods
                                   immediately when the rolling update starts. Once new pods are ready, old ReplicaSet
@@ -2758,13 +2758,13 @@ spec:
                           type: object
                         hostPath:
                           description: |-
-                            hostPath represents a pre-existing file or directory on the host
+                            hostPath represents a preexisting file or directory on the host
                             machine that is directly exposed to the container. This is generally
                             used for system agents or other privileged things that are allowed
                             to see the host machine. Most containers will NOT need this.
                             More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
                             ---
-                            TODO(jonesdl) We need to restrict who can use host directory mounts and who can/can not
+                            TODO(jonesdl) We need to restrict who can use host directory mounts and who can/cannot
                             mount host directories as read/write.
                           properties:
                             path:
@@ -4734,13 +4734,13 @@ spec:
                                                   type: string
                                                 ignoreCase:
                                                   description: |-
-                                                    IgnoreCase specifies that string matching should be case insensitive.
+                                                    IgnoreCase specifies that string matching should be case-insensitive.
                                                     Note that this has no effect on the Regex parameter.
                                                   type: boolean
                                                 name:
                                                   description: |-
                                                     Name is the name of the header to match against. Name is required.
-                                                    Header names are case insensitive.
+                                                    Header names are case-insensitive.
                                                   type: string
                                                 notcontains:
                                                   description: |-
@@ -5620,13 +5620,13 @@ spec:
                                 type: string
                               ignoreCase:
                                 description: |-
-                                  IgnoreCase specifies that string matching should be case insensitive.
+                                  IgnoreCase specifies that string matching should be case-insensitive.
                                   Note that this has no effect on the Regex parameter.
                                 type: boolean
                               name:
                                 description: |-
                                   Name is the name of the header to match against. Name is required.
-                                  Header names are case insensitive.
+                                  Header names are case-insensitive.
                                 type: string
                               notcontains:
                                 description: |-
@@ -5684,13 +5684,13 @@ spec:
                                 type: string
                               ignoreCase:
                                 description: |-
-                                  IgnoreCase specifies that string matching should be case insensitive.
+                                  IgnoreCase specifies that string matching should be case-insensitive.
                                   Note that this has no effect on the Regex parameter.
                                 type: boolean
                               name:
                                 description: |-
                                   Name is the name of the query parameter to match against. Name is required.
-                                  Query parameter names are case insensitive.
+                                  Query parameter names are case-insensitive.
                                 type: string
                               prefix:
                                 description: Prefix defines a prefix match for the
@@ -5800,13 +5800,13 @@ spec:
                                 type: string
                               ignoreCase:
                                 description: |-
-                                  IgnoreCase specifies that string matching should be case insensitive.
+                                  IgnoreCase specifies that string matching should be case-insensitive.
                                   Note that this has no effect on the Regex parameter.
                                 type: boolean
                               name:
                                 description: |-
                                   Name is the name of the header to match against. Name is required.
-                                  Header names are case insensitive.
+                                  Header names are case-insensitive.
                                 type: string
                               notcontains:
                                 description: |-
@@ -5864,13 +5864,13 @@ spec:
                                 type: string
                               ignoreCase:
                                 description: |-
-                                  IgnoreCase specifies that string matching should be case insensitive.
+                                  IgnoreCase specifies that string matching should be case-insensitive.
                                   Note that this has no effect on the Regex parameter.
                                 type: boolean
                               name:
                                 description: |-
                                   Name is the name of the query parameter to match against. Name is required.
-                                  Query parameter names are case insensitive.
+                                  Query parameter names are case-insensitive.
                                 type: string
                               prefix:
                                 description: Prefix defines a prefix match for the
@@ -6389,13 +6389,13 @@ spec:
                                                     type: string
                                                   ignoreCase:
                                                     description: |-
-                                                      IgnoreCase specifies that string matching should be case insensitive.
+                                                      IgnoreCase specifies that string matching should be case-insensitive.
                                                       Note that this has no effect on the Regex parameter.
                                                     type: boolean
                                                   name:
                                                     description: |-
                                                       Name is the name of the header to match against. Name is required.
-                                                      Header names are case insensitive.
+                                                      Header names are case-insensitive.
                                                     type: string
                                                   notcontains:
                                                     description: |-
@@ -7832,13 +7832,13 @@ spec:
                                                   type: string
                                                 ignoreCase:
                                                   description: |-
-                                                    IgnoreCase specifies that string matching should be case insensitive.
+                                                    IgnoreCase specifies that string matching should be case-insensitive.
                                                     Note that this has no effect on the Regex parameter.
                                                   type: boolean
                                                 name:
                                                   description: |-
                                                     Name is the name of the header to match against. Name is required.
-                                                    Header names are case insensitive.
+                                                    Header names are case-insensitive.
                                                   type: string
                                                 notcontains:
                                                   description: |-
@@ -9339,7 +9339,7 @@ spec:
 
                       If CACertificateRefs is empty or unspecified, then WellKnownCACertificates must be
                       specified. Only one of CACertificateRefs or WellKnownCACertificates may be specified,
-                      not both. If CACertifcateRefs is empty or unspecified, the configuration for
+                      not both. If CACertificateRefs is empty or unspecified, the configuration for
                       WellKnownCACertificates MUST be honored instead if supported by the implementation.
 
                       References to a resource in a different namespace are invalid for the
@@ -13110,7 +13110,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -13185,7 +13185,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -13353,7 +13353,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -13428,7 +13428,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -13721,7 +13721,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -13795,7 +13795,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -13962,7 +13962,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -14036,7 +14036,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -14441,7 +14441,7 @@ spec:
                         There are a number of cases where the "Accepted" condition may not be set
                         due to lack of controller visibility, that includes when:
 
-                        * The Route refers to a non-existent parent.
+                        * The Route refers to a nonexistent parent.
                         * The Route is of a type that the controller does not support.
                         * The Route is in a namespace the controller does not have access to.
                       items:
@@ -15195,7 +15195,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -15270,7 +15270,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -15438,7 +15438,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -15513,7 +15513,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -15806,7 +15806,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -15880,7 +15880,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -16047,7 +16047,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -16121,7 +16121,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -16526,7 +16526,7 @@ spec:
                         There are a number of cases where the "Accepted" condition may not be set
                         due to lack of controller visibility, that includes when:
 
-                        * The Route refers to a non-existent parent.
+                        * The Route refers to a nonexistent parent.
                         * The Route is of a type that the controller does not support.
                         * The Route is in a namespace the controller does not have access to.
                       items:
@@ -17299,7 +17299,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -17374,7 +17374,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -17707,7 +17707,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -17782,7 +17782,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -18220,7 +18220,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -18294,7 +18294,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -18626,7 +18626,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -18700,7 +18700,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -19012,7 +19012,7 @@ spec:
                                 name:
                                   description: |-
                                     Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                    case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                    case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                     If multiple entries specify equivalent header names, only the first
                                     entry with an equivalent name MUST be considered for a match. Subsequent
@@ -19456,7 +19456,7 @@ spec:
                         There are a number of cases where the "Accepted" condition may not be set
                         due to lack of controller visibility, that includes when:
 
-                        * The Route refers to a non-existent parent.
+                        * The Route refers to a nonexistent parent.
                         * The Route is of a type that the controller does not support.
                         * The Route is in a namespace the controller does not have access to.
                       items:
@@ -20203,7 +20203,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -20278,7 +20278,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -20611,7 +20611,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -20686,7 +20686,7 @@ spec:
                                           name:
                                             description: |-
                                               Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                              case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                              case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                               If multiple entries specify equivalent header names, the first entry with
                                               an equivalent name MUST be considered for a match. Subsequent entries
@@ -21124,7 +21124,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -21198,7 +21198,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -21530,7 +21530,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -21604,7 +21604,7 @@ spec:
                                     name:
                                       description: |-
                                         Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                        case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                        case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                         If multiple entries specify equivalent header names, the first entry with
                                         an equivalent name MUST be considered for a match. Subsequent entries
@@ -21916,7 +21916,7 @@ spec:
                                 name:
                                   description: |-
                                     Name is the name of the HTTP Header to be matched. Name matching MUST be
-                                    case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
+                                    case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).
 
                                     If multiple entries specify equivalent header names, only the first
                                     entry with an equivalent name MUST be considered for a match. Subsequent
@@ -22360,7 +22360,7 @@ spec:
                         There are a number of cases where the "Accepted" condition may not be set
                         due to lack of controller visibility, that includes when:
 
-                        * The Route refers to a non-existent parent.
+                        * The Route refers to a nonexistent parent.
                         * The Route is of a type that the controller does not support.
                         * The Route is in a namespace the controller does not have access to.
                       items:
@@ -23269,7 +23269,7 @@ spec:
                     backendRefs:
                       description: |-
                         BackendRefs defines the backend(s) where matching requests should be
-                        sent. If unspecified or invalid (refers to a non-existent resource or a
+                        sent. If unspecified or invalid (refers to a nonexistent resource or a
                         Service with no endpoints), the underlying implementation MUST actively
                         reject connection attempts to this backend. Connection rejections must
                         respect weight; if an invalid backend is requested to have 80% of
@@ -23453,7 +23453,7 @@ spec:
                         There are a number of cases where the "Accepted" condition may not be set
                         due to lack of controller visibility, that includes when:
 
-                        * The Route refers to a non-existent parent.
+                        * The Route refers to a nonexistent parent.
                         * The Route is of a type that the controller does not support.
                         * The Route is in a namespace the controller does not have access to.
                       items:
@@ -24061,7 +24061,7 @@ spec:
                     backendRefs:
                       description: |-
                         BackendRefs defines the backend(s) where matching requests should be
-                        sent. If unspecified or invalid (refers to a non-existent resource or
+                        sent. If unspecified or invalid (refers to a nonexistent resource or
                         a Service with no endpoints), the rule performs no forwarding; if no
                         filters are specified that would result in a response being sent, the
                         underlying implementation must actively reject request attempts to this
@@ -24248,7 +24248,7 @@ spec:
                         There are a number of cases where the "Accepted" condition may not be set
                         due to lack of controller visibility, that includes when:
 
-                        * The Route refers to a non-existent parent.
+                        * The Route refers to a nonexistent parent.
                         * The Route is of a type that the controller does not support.
                         * The Route is in a namespace the controller does not have access to.
                       items:
@@ -24796,7 +24796,7 @@ spec:
                     backendRefs:
                       description: |-
                         BackendRefs defines the backend(s) where matching requests should be
-                        sent. If unspecified or invalid (refers to a non-existent resource or a
+                        sent. If unspecified or invalid (refers to a nonexistent resource or a
                         Service with no endpoints), the underlying implementation MUST actively
                         reject connection attempts to this backend. Packet drops must
                         respect weight; if an invalid backend is requested to have 80% of
@@ -24980,7 +24980,7 @@ spec:
                         There are a number of cases where the "Accepted" condition may not be set
                         due to lack of controller visibility, that includes when:
 
-                        * The Route refers to a non-existent parent.
+                        * The Route refers to a nonexistent parent.
                         * The Route is of a type that the controller does not support.
                         * The Route is in a namespace the controller does not have access to.
                       items:
