@@ -1708,7 +1708,7 @@ spec:
                                 - type: string
                                 description: |-
                                   The maximum number of nodes with an existing available DaemonSet pod that
-                                  can have an updated DaemonSet pod during during an update.
+                                  can have an updated DaemonSet pod during an update.
                                   Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).
                                   This cannot be 0 if MaxUnavailable is 0.
                                   Absolute number is calculated from percentage by rounding up to a minimum of 1.
